@@ -83,26 +83,6 @@ typedef struct state {
 
 } State;
 
-int stack_traversal(Position pre, Position cur) {
-    memset(visited, 0, sizeof visited);
-    visited[pre._x][pre._y] = true;
-    stack<State> stk;
-    stk.push(State(pre, cur, 2));
-    while(!stk.empty()) {
-        State top = stk.top();
-        // print(top.cur);
-        stk.pop();
-        visited[top.cur._x][top.cur._y] = true;
-        Position next_pos = get_next(top.pre, top.cur);
-        if (!is_visited(next_pos) && !is_outside(next_pos)) {
-            stk.push(State(top.cur, next_pos, top.step + 1));
-        }
-        if (stk.empty()) {
-            return top.step;
-        }
-    }
-}
-
 void print_map() {
     printf("%3s", "");
     REP(i, 0, C) {
@@ -119,10 +99,7 @@ void print_map() {
 }
 
 int main() {
-    freopen("input01.txt", "r", stdin);
-    
     cin >> C >> R >> K;
-
     int x, y ,t;
     REP(i, 0, K) {
         cin >> x >> y >> t;
@@ -133,18 +110,13 @@ int main() {
             m[R-1-y][x] = 1;
         }
     }
-    
     // print_map();
-
-    // int p1 = 1 + traversal(Position(R-1, 0), Position(R-2, 0));
-    // memset(visited, 0, sizeof visited);
-    // int p2 = 1 + traversal(Position(R-1, 0), Position(R-1, 1));
     int p1 = 1, p2 = 1;
     if (R > 1) {
-        p1 = stack_traversal(Position(R-1, 0), Position(R-2, 0));
+        p1 = traversal(Position(R-1, 0), Position(R-2, 0));
     }
     if (C > 1) {
-        p2 = stack_traversal(Position(R-1, 0), Position(R-1, 1));
+        p2 = traversal(Position(R-1, 0), Position(R-1, 1));
     }
     cout << min(p1, p2) << " " << max(p1, p2) << endl;
     return 0;
