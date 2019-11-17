@@ -4,9 +4,9 @@
 #define FOR(i, a, b)    for(int i = (a), _b = (b); i <= _b; ++i)
 #define FORD(i, a, b)   for(int i = (a), _b = (b); i >= _b; --i)
 
-#define endl 			"\n"
-#define newline			cout << "\n"
-#define puts(_content_)	cout << _content_ << "\n" 
+#define endl             "\n"
+#define newline            cout << "\n"
+#define puts(_content_)    cout << _content_ << "\n" 
 
 using namespace std;
 
@@ -66,9 +66,5 @@ int main() {
         }
     }
     cout << min_cost << " " << count << endl;
-
-    // print(odds);
-    // print(evens);
-
     return 0;
 }

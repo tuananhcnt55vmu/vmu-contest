@@ -4,9 +4,9 @@
 #define FOR(i, a, b)    for(int i = (a), _b = (b); i <= _b; ++i)
 #define FORD(i, a, b)   for(int i = (a), _b = (b); i >= _b; --i)
 
-#define endl 			"\n"
-#define newline			cout << "\n"
-#define puts(_content_)	cout << _content_ << "\n" 
+#define endl             "\n"
+#define newline            cout << "\n"
+#define puts(_content_)    cout << _content_ << "\n" 
 
 using namespace std;
 
@@ -31,8 +31,6 @@ int main() {
     cin.tie(0);
     cout.tie(0);
 
-    // freopen("input.txt", "r", stdin);    
-
     int n, start, end;
     vector<Meeting> meetings;
     cin >> n;
@@ -52,9 +50,7 @@ int main() {
             selected_ids.push_back(meetings[i].id);
         }
     }
-    // REP(i, 0, n) {
-    //     cout << meetings[i]._start << " " << meetings[i]._end << endl;
-    // }
+    
     puts(selected_ids.size());
     for (int id : selected_ids) {
         puts(id);
