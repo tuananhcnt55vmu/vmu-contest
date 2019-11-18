@@ -4,9 +4,9 @@
 #define FOR(i, a, b)    for(int i = (a), _b = (b); i <= _b; ++i)
 #define FORD(i, a, b)   for(int i = (a), _b = (b); i >= _b; --i)
 
-#define endl 			"\n"
-#define newline			cout << "\n"
-#define puts(_content_)	cout << _content_ << "\n" 
+#define endl             "\n"
+#define newline            cout << "\n"
+#define puts(_content_)    cout << _content_ << "\n" 
 
 using namespace std;
 const int MAXN = 1010;
@@ -21,10 +21,6 @@ int m[MAXN][MAXN];
 bool visited[MAXN][MAXN];
 
 const Position OUTSIDE = Position(-1, -1); 
-
-void print(Position p) {
-    cout << p._x << " " << p._y << endl;
-}
 
 Position get_next(Position pre, Position cur) {
     if (m[cur._x][cur._y] == 0) {
@@ -51,23 +47,12 @@ Position get_next(Position pre, Position cur) {
     return OUTSIDE; 
 }
 
-inline bool is_outside(Position & p) {
+bool is_outside(Position & p) {
     return p._x < 0 || p._x >= R || p._y < 0 || p._y >= C;
 }
 
-inline bool is_visited(Position & p) {
+bool is_visited(Position & p) {
     return visited[p._x][p._y];
-}
-
-
-int traversal(Position pre, Position cur) {
-    int step = 2;
-    Position next_pos = get_next(pre, cur);
-    while(!is_visited(next_pos) && !is_outside(next_pos)) {
-        step++;
-        next_pos = get_next(cur, next_pos);
-    }
-    return step;
 }
 
 typedef struct state {
@@ -83,23 +68,30 @@ typedef struct state {
 
 } State;
 
-void print_map() {
-    printf("%3s", "");
-    REP(i, 0, C) {
-        printf("%3d", i);
+void set_visited(Position pos) {
+    visited[pos._x][pos._y] = true;
+}
+
+int traversal(Position pre, Position cur) {
+    memset(visited, 0, sizeof visited);
+    set_visited(pre);
+    set_visited(cur);
+    int step = 2;
+    Position next_pos = get_next(pre, cur);
+    while(!is_visited(next_pos) && !is_outside(next_pos)) {
+        step++;
+        pre = cur;
+        cur = next_pos;
+        next_pos = get_next(pre, cur);
+        set_visited(cur);
     }
-    printf("\n\n");
-    REP(i, 0, R) {
-        printf("%-3d", i);
-        REP(j, 0, C) {
-            printf("%3d", m[i][j]);
-        }
-        printf("\n");
-    }
+    return step;
 }
 
 int main() {
+    
     cin >> C >> R >> K;
+
     int x, y ,t;
     REP(i, 0, K) {
         cin >> x >> y >> t;
@@ -110,7 +102,7 @@ int main() {
             m[R-1-y][x] = 1;
         }
     }
-    // print_map();
+    
     int p1 = 1, p2 = 1;
     if (R > 1) {
         p1 = traversal(Position(R-1, 0), Position(R-2, 0));
