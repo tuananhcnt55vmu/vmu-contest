@@ -9,4 +9,4 @@ Với mỗi test kết quả xử lý sẽ gồm 2 số được ghi trên 1 dò
 # Example
 Input | Output
 --- | ---
-2<br>10<br>20 | 1 6<br>3 11
+2<br>10<br>20 | 1 6<br>3 11<br><br>
