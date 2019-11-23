@@ -7,7 +7,7 @@ result = []
 digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 def generate(n):
-    if n is super_prime_number:
+    if n is prime_number:
         result.add(n)
         for digit in digits:
             generate(n * 10 + digit)

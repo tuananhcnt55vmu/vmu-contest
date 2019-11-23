@@ -1,0 +1,1 @@
+Ta sẽ duyệt toàn bộ bản đồ, nếu gặp mìn thì tăng chỉ số của 8 vị trí xung quanh lên 1. Như vậy độ phức tạp sẽ là O($8*N^2$) <=> O($N^2$)
