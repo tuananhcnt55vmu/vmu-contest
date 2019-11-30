@@ -18,4 +18,4 @@ Yều cầu: Cho mô tả bàn cờ vua, thực hiện $Q$ $(Q \le 10^4)$ truy v
 # Example
 Input | Output
 --- | ---
-4<br>1 3 5 7<br>2 4 6 8<br>9 11 13 15<br>10 12 14 16<br>2<br>3 2 4 3<br>1 1 2 3 | 
+4<br>1 3 5 7<br>2 4 6 8<br>9 11 13 15<br>10 12 14 16<br>2<br>3 2 4 3<br>1 1 2 3 | 0<br>1<br><br><br><br><br><br><br>
