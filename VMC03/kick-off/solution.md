@@ -13,5 +13,5 @@ int count2(int n) {
     return cnt;
 }
 ```
-Do n không vượt quá $10^6$ nên số chữ số tối đa mà ta duyệt là 6. Do đó, nếu duyệt từ $1 \rarr 10^6$ và đếm từng số 1 thì độ phức tạp cho giải thuật này là **O(n)** với **$n = 10^6$**.
+Do n không vượt quá $10^6$ nên số chữ số tối đa mà ta duyệt là 6. Do đó, nếu duyệt từ $1 \rarr 10^6$ và đếm từng số 1 thì độ phức tạp cho giải thuật này là $O(n)$ với $n = 10^6$.
 Để tránh phải tính lại các dữ liệu không cần thiết, ta có thể tính trước toàn bộ giá trị và lưu lại ở bước tiền xử lý, khi cần trả lời truy vấn ta chỉ cần đọc dữ liệu đã tính và ghi ra output
