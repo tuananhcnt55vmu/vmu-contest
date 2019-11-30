@@ -1,6 +1,6 @@
 # Statement
-Cho một xâu S chỉ gồm các chữ cái tiếng Anh in hoa, với $1 \le length(S) \le 9$
-Yêu cầu: In ra số lượng hoán vị và danh sách các hoán vị theo thứ tự từ điển
+Cho một xâu S chỉ gồm các chữ cái tiếng Anh in hoa, với $1 \le length(S) \le 10$
+Yêu cầu: In ra số lượng hoán vị của S và danh sách các hoán vị theo thứ tự từ điển
 # Input
 Một dòng duy nhất chứa xâu S
 # Output
