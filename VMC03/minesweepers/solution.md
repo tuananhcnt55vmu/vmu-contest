@@ -1,1 +1,0 @@
-Đây là một bài duyệt cơ bản. Ta sẽ duyệt toàn bộ bản đồ, nếu gặp mìn thì tăng chỉ số của 8 vị trí xung quanh lên 1, chú ý các vị trí nằm ngoài bản đồ. Như vậy độ phức tạp sẽ là $O(N^2)$
