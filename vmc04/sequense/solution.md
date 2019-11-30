@@ -1,4 +1,6 @@
-Nếu liệt kê vài chục số đầu ra, ta sẽ thấy quy luật của dãy số này như sau:
+Trước tiên, ta thử đánh giá xem dãy số này có đặc điểm gì. Nhìn vào công thức, ta thấy không có gì đặc biệt ngoài đảo chữ số. Tuy nhiên, việc đảo chữ số sẽ ảnh hưởng tới tính tăng của dãy số. Lý do là nếu như số hiện tại tồn tại chữ số 0, thì số tiếp theo sẽ giảm (bỏ số 0 ở đầu). Ta sẽ thử duyệt và liệt kê phần đầu tiên của dãy xem có gì đặc biệt về giá trị.
+
+Nếu liệt kê vài chục số đầu:
 
 $i$ | $F[i]$
 :---: | :---:
@@ -39,5 +41,8 @@ $i$ | $F[i]$
 35 | 122227
 36 | 244445
 ... | ...
-Nếu $i < 25$, ta sẽ tính theo công thức $F[i] = sort(F[i-1] * 2)$
-Bắt đầu từ $i = 25$, dãy số sẽ tuần hoàn với chu kỳ là: 48889, 77789, 155578, 111356, 122227, 244445. Quy luật trên tương đương với lời giải của bài toán
+Thật may mắn, nhìn vào dãy số trên, ta thấy quy luật như sau:
+- Nếu $i < 25$, ta sẽ tính theo công thức $F[i] = sort(F[i-1] * 2)$
+- Bắt đầu từ $i = 25$, dãy số sẽ tuần hoàn với chu kỳ là: 48889, 77789, 155578, 111356, 122227, 244445. 
+
+Quy luật trên tương đương với lời giải của bài toán

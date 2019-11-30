@@ -1,6 +1,6 @@
 Dễ thấy rằng, nếu ta duyệt từng vùng chữ nhật với mỗi truy vấn thì độ phức tạp chương trình sẽ là $O(10^4*N^2) = O(10^{10})$. Vì vậy, để giải triệt để bài toán này ta cần phải tiếp cận theo cách khác
 
-Trước tiên, ta sẽ đơn giản hóa bài toán. Thay vì tính độ chênh lệch, ta có thể quy về tính tổng bằng cách đảo dấu các ô trắng (hoặc đen). Như vậy, ta tính tổng lại và lấy giá trị đối cũng tương đương với độ chênh lệch
+Trước tiên, ta sẽ đơn giản hóa bài toán. Thay vì tính độ chênh lệch, ta có thể quy về tính tổng bằng cách đảo dấu các ô trắng (hoặc đen). Như vậy, ta tính tổng lại và lấy giá trị tuyệt đối cũng tương đương với độ chênh lệch
 # Giải thuật $O(N^2)$
 
 

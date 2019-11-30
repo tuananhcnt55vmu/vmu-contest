@@ -1,5 +1,5 @@
 # Statement
-Cho một bàn cờ vua kích thước $N*N$, trên mỗi ô của bàn cơ ghi một số nguyên dương không lớn hơn 100. Các hàng được đánh số từ 1 tới N từ trên xuống dưới, các cột được đánh số từ 1 tới N từ trái sang phải. Biết ô trên trái $(1,1)$ của bàn cờ vua là ô trắng (các ô trắng và các ô đen xen kẽ nhau). Nhiệm vụ của bạn là tìm độ chênh lệch giữa tổng giá trị các ô màu đen và các ô màu trắng trên 1 vùng nào đó, một vùng được xác định bằng 2 điểm (điểm trái trên và điểm phải dưới). 
+Cho một bàn cờ vua kích thước $N*N$, trên mỗi ô của bàn cơ ghi một số nguyên dương không lớn hơn 100. Các hàng được đánh số từ 1 tới N từ trên xuống dưới, các cột được đánh số từ 1 tới N từ trái sang phải. Biết ô trái trên $(1,1)$ của bàn cờ vua là ô trắng (các ô trắng và các ô đen xen kẽ nhau). Nhiệm vụ của bạn là tìm độ chênh lệch giữa tổng giá trị các ô màu đen và các ô màu trắng trên 1 vùng nào đó, một vùng được xác định bằng 2 điểm (điểm trái trên và điểm phải dưới). 
 
 Ví dụ:
 
