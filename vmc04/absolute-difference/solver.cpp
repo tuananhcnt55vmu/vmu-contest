@@ -9,7 +9,7 @@
 #define puts(_content_)	cout << _content_ << "\n" 
 
 using namespace std;
-const int MAXN = 505;
+const int MAXN = 1010;
 
 int N, mp[MAXN][MAXN], dp[MAXN][MAXN];
 
