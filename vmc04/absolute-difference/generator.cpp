@@ -53,20 +53,40 @@ void random (int N, int Q) {
     REP(q, 0, Q) {
         int begin = index_factory.generate();
         int end = index_factory.generate();
-        if (begin > end) {
-            swap(begin, end);
-        }
         pii l1 = get_location(begin, N);
         pii l2 = get_location(end, N);
+        while (l2.first < l1.first || l2.second < l1.second) {
+            begin = index_factory.generate();
+            end = index_factory.generate();
+            l1 = get_location(begin, N);
+            l2 = get_location(end, N);
+        }
         cout << l1.first << " " << l1.second << " " << l2.first << " " << l2.second << endl;
+    }
+}
+
+void large_test() {
+    int N = 1000, Q = 10000;
+    puts(N);
+    Generator<int> value_factory(1, 100);
+    FOR(i, 1, N) {
+        FOR(j, 1, N) {
+            cout << value_factory.generate() << " ";
+        }
+        cout << endl;
+    }
+    puts(Q);
+    REP(i, 0, Q) {
+        cout << "1 1 1000 1000" << endl;
     }
 }
 
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    int N, Q;
-    cin >> N >> Q;
-    random(N, Q);
+    // int N, Q;
+    // cin >> N >> Q;
+    // random(N, Q);
+    large_test();
     return 0;
 }

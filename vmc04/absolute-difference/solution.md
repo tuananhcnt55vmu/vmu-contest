@@ -31,6 +31,6 @@ YELLOW = TOTAL - (RED + MAGENTA) - (BLUE + MAGENTA) + MAGENTA
 
 Nói cách khác, gọi YELLOW = $S_{x_1,y_1,y_2,y_2}$ là tổng của vùng $(x_1, y_1) \rarr (x_2, y_2)$ thì:
 
-$S_{x_1,y_1,y_2,y_2} = sum[x_2][y_2] - sum[x_1-1][y_2] - sum[x2][y_1-1] + sum[x_1-1][y_1-1]$
+$S_{x_1,y_1,x_2,y_2} = sum[x_2][y_2] - sum[x_1-1][y_2] - sum[x2][y_1-1] + sum[x_1-1][y_1-1]$
 
 Vậy bài toán đã được giải quyết
