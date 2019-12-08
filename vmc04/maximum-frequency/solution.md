@@ -1,0 +1,1 @@
+Ta sẽ giả lập quá trình quay xúc sắc, giả sử trong 1 lần quay: $C_1$ ra $s_1$, $C_2$ ra $s_2$, $C_3$ ra $s_3$. Thì mỗi lần ta thu được $sum = s_1 + s_2 + s_3$. Như vậy, ta chỉ cần duyệt hết tất cả các trường hợp có thể của $s_1$, $s_2$, $s_3$ và liệt kê lại số lần xuất hiện của $sum$ là tìm ra được. Như vậy độ phức tạp thuật toán là $O(S_1*S_2*S_3) = O(10^6)$
