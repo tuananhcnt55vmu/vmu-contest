@@ -23,7 +23,7 @@ Ta có thể đánh giá được điều kiện dừng của công thức trên
 
 Như vậy, trạng thái ta cần tìm là dp[R][C][k] với k thuộc [0, N]
 
-Với cách này, ta chỉ cần duyệt toàn bộ cặp (i, j, k) là có thể tính được toàn bộ đáp án. Độ phức tạp là $O(K.R.C) = O(R^2.C^2)$
+Với cách này, ta chỉ cần duyệt toàn bộ cặp (i, j, k) là có thể tính được toàn bộ đáp án. Độ phức tạp là $O((K+1).R.C)$
 
 
 <!-- this css for latex -->

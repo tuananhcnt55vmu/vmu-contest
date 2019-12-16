@@ -12,11 +12,11 @@ using namespace std;
 
 const int LIM = 111, MOD = 1E9 + 7;
 
-bool belongP[LIM][LIM];
-int R, C, K, dp[LIM][LIM][LIM];
+
+int R, C, K, P[LIM][LIM];
 vector<int> ans;
 
-int dx[] = {-1, 0};
+int dx[] = {1, 0};
 int dy[] = {0, 1};
 
 bool isValid (int x, int y) {
@@ -24,15 +24,16 @@ bool isValid (int x, int y) {
 }
 
 void traversal (int x, int y, int cnt) {
-    if (x == 1 && y == C) {
+    if (x == R && y == C) {
         ans[cnt]++;
+        ans[cnt] %= MOD;
     }
     else {
         for (int i = 0; i < 2; ++i) {
             int nx = x + dx[i];
             int ny = y + dy[i];
             if (isValid(nx, ny)) {
-                traversal(nx, ny, (cnt + belongP[nx][ny] | 0) % MOD);
+                traversal(nx, ny, cnt + P[nx][ny]);
             }
         }
     }
@@ -46,9 +47,9 @@ int main() {
     int x, y;
     REP(i, 0, K) {
         cin >> x >> y;
-        belongP[R - x + 1][y] = true;
+        P[x][y] = 1;
     }
-    traversal(R, 1, 0);
+    traversal(1, 1, P[1][1]);
     FOR(i, 0, K) {
         cout << ans[i] << endl;
     }
