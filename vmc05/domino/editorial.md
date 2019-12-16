@@ -1,0 +1,3 @@
+Đây là một bài toán duyệt đồ thị cơ bản, ta sẽ sử dụng tìm kiếm theo chiều rộng (BFS) để duyệt và độ sâu lớn nhất (nhân với 0.1) sẽ là thời gian tất cả các domino đổ xuống. Ở đây vì tính chất đồng thời (đổ xuống) nên ta không thể sử dụng tìm kiếm theo chiều sâu (DFS) được. Độ phức tạp là với cách cài đặt BFS sẽ là O(số ô trên bản đồ) = $O(L.W)$<!-- this css for latex -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
